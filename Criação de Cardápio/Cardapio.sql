@@ -45,7 +45,7 @@ WHERE preco >= 17.00 AND preco < 36.00;
 
 
 --Consultar todos os pratos do cardápio que termina com a letra (i)
--- Usa-se o (LIKE "% a letra que procuramos")para encontrar as palavras que terminam com essa determinada letra.
+-- Usa-se o (LIKE "%s")para encontrar as palavras que terminam com essa determinada letra.
 --("%s%"(para buscar uma  palavra com esse entre ela) 
 SELECT * 
 FROM cardapio
@@ -98,4 +98,10 @@ FROM cardapio;
 
 --Mostrar o valor minimo e o valor máximo do  preço dos pratos
 SELECT MIN(preco), MAX(preco)
+FROM cardapio
+
+
+--Comando para renomear colunas ou atribuir um apelido
+
+SELECT nomeprato AS 'Nome do Prato', preco AS ' Preço do Produto' 
 FROM cardapio
